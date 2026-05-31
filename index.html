@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jonathan Salfity</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Georgia", serif;
+      font-size: 15px;
+      line-height: 1.4;
+      color: #222;
+      background: #fff;
+      max-width: 800px;
+      margin: 48px auto;
+      padding: 0 24px 60px;
+    }
+
+    a { color: #2e86de; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    #header { display: flex; gap: 28px; align-items: flex-start; margin-bottom: 28px; }
+
+    #header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      flex-shrink: 0;
+    }
+
+    #header-text h1 { font-size: 1.8rem; font-weight: normal; margin-bottom: 2px; }
+
+    #header-text .subtitle {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    #header-text .links { font-size: 0.88rem; }
+    #header-text .links a { margin-right: 10px; }
+
+    /* ── Bio (no heading) ── */
+    #bio { margin-bottom: 22px; font-size: 0.95rem; }
+    #bio p { margin-bottom: 6px; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 26px; }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+
+    p { margin-bottom: 6px; }
+
+    /* ── Education ── */
+    .edu-entry { margin-bottom: 6px; font-size: 0.93rem; }
+
+    /* ── Publications ── */
+    .pub {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      align-items: flex-start;
+    }
+
+    .pub img {
+      width: 300px;
+      flex-shrink: 0;
+      border: 1px solid #e0e0e0;
+    }
+
+    .pub-body { flex: 1; min-width: 0; }
+    .pub-body .title { font-weight: bold; font-size: 0.93rem; margin-bottom: 2px; }
+    .pub-body .authors { font-size: 0.88rem; margin-bottom: 2px; }
+    .pub-body .venue { color: #555; font-size: 0.87rem; margin-bottom: 4px; }
+    .pub-body .abstract { font-size: 0.87rem; color: #444; margin-bottom: 4px; }
+
+    /* ── Patents ── */
+    .patent { margin-bottom: 5px; font-size: 0.88rem; }
+
+    /* ── Experience ── */
+    .job { display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+    .job-logo { width: 72px; flex-shrink: 0; display: flex; justify-content: center; align-items: flex-start; padding-top: 2px; }
+    .job-logo img { object-fit: contain; max-height: 44px; }
+    .job-content { flex: 1; min-width: 0; }
+    .job .job-header { display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 1px; }
+    .job .org { font-weight: bold; font-size: 0.93rem; }
+    .job .dates { color: #666; font-size: 0.88rem; }
+    .job .role { color: #555; font-size: 0.88rem; margin-bottom: 3px; }
+    .job ul { padding-left: 18px; font-size: 0.88rem; }
+    .job ul li { margin-bottom: 1px; }
+
+    @media (max-width: 560px) {
+      #header { flex-direction: column; }
+      #header img { width: 110px; height: 110px; }
+      .pub { flex-direction: column; }
+      .pub img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div id="header">
+  <img src="photo.jpg" alt="Jonathan Salfity">
+  <div id="header-text">
+    <h1>Jonathan Salfity</h1>
+    <div class="subtitle">
+      PhD Candidate, Mechanical Engineering · UT Austin<br>
+      Co-Founder, <a href="https://geckomaterials.com" target="_blank">geCKo Materials</a>
+    </div>
+    <div class="links">
+      Email: firstname dot lastname at gmail<br>
+      <a href="https://linkedin.com/in/jsalfity" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a> &nbsp;|&nbsp;
+      <a href="JonathanSalfity_resumeCV_2026.pdf" target="_blank">CV</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Bio (no heading, like fredshentu) ── -->
+<div id="bio">
+  <p>I am a final year PhD student in the <a href="https://robotics.me.utexas.edu/" target="_blank">Nuclear and Applied Robotics Group</a> at UT Austin, advised by <a href="https://www.me.utexas.edu/people/faculty-directory/pryor" target="_blank">Mitch Pryor</a>. My current research focuses on robotic skill and behavior composition for modular robots. The first two years of my PhD focused on game theory and nonlinear optimization.</p>
+  <p>I co-founded <a href="https://geckomaterials.com" target="_blank">geCKo Materials</a> in 2021, a hardware startup commercializing biomimetic industrial adhesives. We've recently raised ~$10M, built a team of 12+, and ship <a href="https://www.geckomaterials.com/specifications" target="_blank">gMDA</a>. My good friend and our CEO, Capella Kerst, and the team has been <a href="https://www.youtube.com/watch?v=1Tb_UOQqeG8" target="_blank">crushing it</a>!</p>
+  <p>Before my PhD, I spent six years at HP Labs in Palo Alto, CA as a Roboticist and Research Engineer, working across mobile robotics, AI, 3D printing, and edge compute. I also spent summers at Cruise working on motion planning and control analysis and their large driving model for self-driving vehicles.</p>
+  <p>People describe me as "an all around great guy."</p>
+</div>
+
+<!-- ── Education ── -->
+<section id="education">
+  <h2>Education</h2>
+  <div class="edu-entry">
+    <strong>PhD, Mechanical Engineering</strong> — UT Austin, Robotics (Expected 2026)<br>
+    Advisor: <a href="https://www.me.utexas.edu/people/faculty-directory/pryor" target="_blank">Mitch Pryor</a> · <a href="https://robotics.me.utexas.edu/" target="_blank">Nuclear and Applied Robotics Group</a>
+  </div>
+  <div class="edu-entry">
+    <strong>MS, Mechanical Engineering</strong> — UCLA, Systems &amp; Control, Robotics (2014)<br>
+    Advisor: <a href="https://samueli.ucla.edu/people/robert-mcloskey/" target="_blank">Robert M'Closkey</a>
+  </div>
+  <div class="edu-entry">
+    <strong>BS, Mechanical Engineering</strong> — UCLA (2013)
+  </div>
+</section>
+
+<!-- ── Experience ── -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="job-logo"><img src="img/gecko_materials.png" alt="geCKo Materials" style="max-width:72px"></div>
+    <div class="job-content">
+      <div class="job-header">
+        <span class="org"><a href="https://geckomaterials.com" target="_blank">geCKo Materials</a></span>
+        <span class="dates">2021 – Present</span>
+      </div>
+      <div class="role">Co-Founder / Advisor · Campbell, CA</div>
+      <ul>
+        <li>Co-founded a biomimetic industrial adhesives company; contributed to $10M raise.</li>
+        <li>Scaled team to 12+ FTEs in a 10,000 sq. ft. manufacturing facility with weekly product shipments.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-logo"><img src="img/cruise_logo.png" alt="Cruise" style="max-width:64px"></div>
+    <div class="job-content">
+      <div class="job-header">
+        <span class="org">Cruise LLC</span>
+        <span class="dates">2023 – 2024</span>
+      </div>
+      <div class="role">Behaviors PhD Intern (Summer 2024) · Motion Planning &amp; Control PhD Intern (Summer 2023)</div>
+      <ul>
+        <li>MLE on <a href="https://arxiv.org/abs/2412.14415" target="_blank">DriveGPT</a>: autoregressive decoder in a large transformer for vehicle trajectory prediction.</li>
+        <li>Kinematic and dynamic metrics for trajectory generation analysis in self-driving vehicles.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-logo"><img src="img/HP_logo_2025.png" alt="HP Labs" style="max-width:36px"></div>
+    <div class="job-content">
+      <div class="job-header">
+        <span class="org">HP Labs (AI &amp; Emerging Compute Lab)</span>
+        <span class="dates">2016 – 2020</span>
+      </div>
+      <div class="role">Roboticist &amp; Research Engineer · Palo Alto, CA</div>
+      <ul>
+        <li>Designed PoCs for compute-constrained mobile robots with off-board ML inference.</li>
+        <li>Tried, to no avail, to convince HP executives to move into robotics.</li>
+        <li>Developed robotic cleaning solutions for 3D Print.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="job-logo"><img src="img/HP_logo_2025.png" alt="HP Inc." style="max-width:36px"></div>
+    <div class="job-content">
+      <div class="job-header">
+        <span class="org">HP Inc. (Hardware R&amp;D, 3D Print)</span>
+        <span class="dates">2014 – 2016</span>
+      </div>
+      <div class="role">Control System and Servo Engineer · San Diego, CA</div>
+      <ul>
+        <li>Built FDM 3D printer prototype from first principles; MIMO control laws for xyz, extruder, and temperature axes.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Publications ── -->
+<section id="publications">
+  <h2>Publications</h2>
+
+  <div class="pub">
+    <img src="img/bt-mcp-server-v2.svg" alt="Contract-Grounded Behavior Tree Synthesis">
+    <div class="pub-body">
+      <div class="title">Contract-Grounded Behavior Tree Synthesis</div>
+      <div class="authors"><strong>J Salfity</strong>, B Anderson, M Pryor</div>
+      <div class="venue"><em>IEEE Robotics and Automation Letters (RA-L)</em>, 2026 (Submitted)</div>
+      <div class="links-row"><span style="color:#999; font-size:0.87rem;">website coming soon</span></div>
+      <div class="abstract">Abstract coming soon.</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="img/deployment_is_not_destiny.png" alt="Deployment Is Not Destiny">
+    <div class="pub-body">
+      <div class="title">Deployment Is Not Destiny: Adapting Robots in the Field with Unseen Software, Hardware, and Compute Payloads</div>
+      <div class="authors">S Swanbeck*, <strong>J Salfity*</strong>, J Gunawan, C Van Sice, B Anderson, M Pryor</div>
+      <div class="venue"><em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 2026 (Submitted) &nbsp;·&nbsp; <span style="font-size:0.85rem; color:#555;">* equal contribution</span></div>
+      <div class="abstract">A plug-and-play framework for runtime recomposition of modular robots, enabling non-expert users to integrate unseen software, hardware, and compute payloads in the field within minutes. Demonstrated in disaster response scenarios at an operational nuclear reactor facility and in thermal-guided search.</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="img/ACL_2026.png" alt="Limited Linguistic Diversity">
+    <div class="pub-body">
+      <div class="title">Limited Linguistic Diversity in Embodied AI Datasets</div>
+      <div class="authors">S Wanna, A Luhtaru, <strong>J Salfity</strong>, R Barron, J Moore, C Matuszek, M Pryor</div>
+      <div class="venue"><em>Association for Computational Linguistics (ACL)</em>, 2026 (To appear)</div>
+      <div class="abstract">A systematic audit of widely used VLA corpora showing that many datasets rely on highly repetitive, template-like commands with limited structural variation. We quantify instruction language across lexical variety, duplication, semantic similarity, and syntactic complexity to support more principled dataset selection and targeted augmentation strategies.</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="img/ubiquitous_robots_conops.png" alt="No Reboot Required">
+    <div class="pub-body">
+      <div class="title"><a href="https://ieeexplore.ieee.org/abstract/document/11078050/" target="_blank">No Reboot Required: Real-Time Modular Robot Payload Integration</a></div>
+      <div class="authors"><strong>J Salfity</strong>, C Van Sice, B Chen, S Swanbeck, B Anderson, M Pryor</div>
+      <div class="venue"><em>IEEE International Conference on Ubiquitous Robotics</em>, July 2025</div>
+      <div class="abstract">We introduce a runtime integration system enabling modular robots to incorporate new hardware and software payloads during live operation, eliminating the need for system reboots and enabling continuous deployment.</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="img/temporal_semantic.jpg" alt="Temporal and Semantic Metrics">
+    <div class="pub-body">
+      <div class="title"><a href="https://arxiv.org/abs/2403.17238" target="_blank">Temporal and Semantic Evaluation Metrics for Foundation Models in Post-Hoc Analysis of Robotic Subtasks</a></div>
+      <div class="authors"><strong>J Salfity</strong>, S Wanna, M Choi, M Pryor</div>
+      <div class="venue"><em>IEEE International Conference on Ubiquitous Robotics Workshop on Virtual Environment-Based Synthetic Data Generation for Robotic Training</em>, July 2025</div>
+      <div class="abstract">We propose temporal and semantic metrics for evaluating foundation models' ability to decompose robot trajectories into subtasks, benchmarking FM outputs against ground-truth subtask labels.</div>
+    </div>
+  </div>
+
+  <!--
+  <div class="pub">
+    <img src="img/language.png" alt="Let's Talk About Language">
+    <div class="pub-body">
+      <div class="title">Let's Talk About Language! Investigating Linguistic Diversity in Embodied AI Datasets</div>
+      <div class="authors">S Wanna, A Luhtaru, R Barron, <strong>J Salfity</strong>, J Moore, C Matuszek, M Pryor</div>
+      <div class="venue"><em>IEEE ICRA Safe VLM Workshop</em>, May 2025</div>
+      <div class="abstract">We analyze linguistic diversity in embodied AI datasets, revealing substantial gaps in language variety that may limit the generalization of language-conditioned robot policies across diverse human instructions.</div>
+    </div>
+  </div>
+  -->
+
+  <div class="pub">
+    <img src="img/inverse_matrix_games.png" alt="Inverse Matrix Games">
+    <div class="pub-body">
+      <div class="title"><a href="https://ieeexplore.ieee.org/abstract/document/9920011/" target="_blank">Inverse Matrix Games with Unique Quantal Response Equilibrium</a></div>
+      <div class="authors">Yue Yu, <strong>J Salfity</strong>, D Fridovich-Keil, U Topcu</div>
+      <div class="venue"><em>IEEE Control Systems Letters</em>, 2022</div>
+      <div class="abstract">We study inverse game problems in multiplayer matrix games under perception noise, inferring cost functions such that a desired joint strategy constitutes a unique quantal response equilibrium, with algorithms based on semidefinite programming and bilevel optimization.</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="img/development_of_robotic_3DP.png" alt="Automated Decaking">
+    <div class="pub-body">
+      <div class="title"><a href="https://ieeexplore.ieee.org/abstract/document/9197110/" target="_blank">Development of a Robotic System for Automated Decaking of 3D-Printed Parts</a></div>
+      <div class="authors">H Nguyen, N Adrian, JLX Yan, <strong>J Salfity</strong>, W Allen, QC Pham</div>
+      <div class="venue"><em>IEEE International Conference on Robotics and Automation (ICRA)</em>, May 2020</div>
+      <div class="abstract">We develop a robotic system using computer vision and manipulator control to automate the removal of residual powder from 3D-printed parts, enabling scalable post-processing for powder-bed fusion manufacturing.</div>
+    </div>
+  </div>
+
+  <div class="pub">
+    <img src="img/edge_offload.png" alt="ML Inference Offload">
+    <div class="pub-body">
+      <div class="title"><a href="https://arxiv.org/abs/2012.04063" target="_blank">Cost-effective Machine Learning Inference Offload for Edge Computing</a></div>
+      <div class="authors">C Makaya, A Iyer, <strong>J Salfity</strong>, M Athreya, MA Lewis</div>
+      <div class="venue">HP Labs Technical Report, 2020</div>
+      <div class="abstract">An offloading mechanism that leverages on-premises edge compute resources to handle ML inference for resource-constrained devices, reducing reliance on distant cloud servers. Demonstrated on person and object detection for mobile robots and video surveillance with improvements in accuracy and latency.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Patents ── -->
+<section id="patents">
+  <h2>Patents</h2>
+  <p style="font-size:0.88rem; margin-bottom:8px; color:#444;">12 patents filed across robotic mobility, robotic manipulation, 3D print, edge compute, and AI/ML. Selected public patents:</p>
+
+  <div class="patent">A Iyer, C Makaya, <strong>J Salfity</strong>. Transmission Rate Modification Based on Predicted Data. US2020/0353193A1</div>
+  <div class="patent">W Allen, <strong>J Salfity</strong>. <a href="https://patents.google.com/patent/WO2020122953A1/en" target="_blank">Mobile Autonomous Fleet Control</a>. WO2020122953A1</div>
+  <div class="patent">K Erickson, <strong>J Salfity</strong>, L Zhao. <a href="https://patents.google.com/patent/WO2020046267A1/en" target="_blank">Modules of Three-Dimensional Printers</a>. WO2020046267A1</div>
+  <div class="patent"><strong>J Salfity</strong>, W Allen, H Horii. <a href="https://patents.google.com/patent/WO2019088990A1/en" target="_blank">Control System for Mobile Robots</a>. WO2019088990A1</div>
+  <div class="patent"><strong>J Salfity</strong>, D Murphy. <a href="https://patents.google.com/patent/WO2019089018A1/en" target="_blank">Mobile Robots to Generate Reference Maps for Localization</a>. WO2019089018A1</div>
+  <div class="patent"><strong>J Salfity</strong>, D Murphy, W Allen. <a href="https://patents.google.com/patent/WO2019089017A1/en" target="_blank">Mobile Robots to Generate Occupancy Maps</a>. WO2019089017A1</div>
+  <div class="patent">S Stodder, <strong>J Salfity</strong>, M Majette. <a href="https://patents.google.com/patent/WO2017086908A1/en" target="_blank">Correction of Filament Parameters</a>. WO2017086908A1</div>
+</section>
+
+</body>
+</html>
