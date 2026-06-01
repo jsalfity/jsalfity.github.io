@@ -65,7 +65,12 @@
     p { margin-bottom: 6px; }
 
     /* ── Education ── */
-    .edu-entry { margin-bottom: 6px; font-size: 0.93rem; }
+    .edu-entry { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+    .edu-logo { width: 72px; flex-shrink: 0; display: flex; justify-content: center; align-items: flex-start; padding-top: 2px; }
+    .edu-logo img { max-width: 100%; max-height: 32px; object-fit: contain; }
+    .edu-content { flex: 1; font-size: 0.93rem; }
+    .edu-content .field { color: #555; font-size: 0.88rem; }
+    .edu-content .advisor { color: #555; font-size: 0.88rem; }
 
     /* ── Publications ── */
     .pub {
@@ -143,15 +148,26 @@
 <section id="education">
   <h2>Education</h2>
   <div class="edu-entry">
-    <strong>PhD, Mechanical Engineering</strong> — UT Austin, Robotics & AI (Expected 2026)<br>
-    Advisor: <a href="https://www.me.utexas.edu/people/faculty-directory/pryor" target="_blank">Mitch Pryor</a> · <a href="https://robotics.me.utexas.edu/" target="_blank">Nuclear and Applied Robotics Group</a>
+    <div class="edu-logo"><img src="img/ut_logo.png" alt="UT Austin" style="max-height:44px"></div>
+    <div class="edu-content">
+      <strong>PhD, Mechanical Engineering</strong> — UT Austin (Expected 2026)<br>
+      <span class="field">Robotics &amp; AI</span><br>
+      <span class="advisor">Advisor: <a href="https://www.me.utexas.edu/people/faculty-directory/pryor" target="_blank">Mitch Pryor</a> · <a href="https://robotics.me.utexas.edu/" target="_blank">Nuclear and Applied Robotics Group</a></span>
+    </div>
   </div>
   <div class="edu-entry">
-    <strong>MS, Mechanical Engineering</strong> — UCLA, Systems &amp; Control(2014)<br>
-    Advisor: <a href="https://samueli.ucla.edu/people/robert-mcloskey/" target="_blank">Robert M'Closkey</a>
+    <div class="edu-logo"><img src="img/ucla_logo.png" alt="UCLA"></div>
+    <div class="edu-content">
+      <strong>MS, Mechanical Engineering</strong> — UCLA (2014)<br>
+      <span class="field">Systems &amp; Control</span><br>
+      <span class="advisor">Advisor: <a href="https://samueli.ucla.edu/people/robert-mcloskey/" target="_blank">Robert M'Closkey</a></span>
+    </div>
   </div>
   <div class="edu-entry">
-    <strong>BS, Mechanical Engineering</strong> — UCLA (2013)
+    <div class="edu-logo"><img src="img/ucla_logo.png" alt="UCLA"></div>
+    <div class="edu-content">
+      <strong>BS, Mechanical Engineering</strong> — UCLA (2013)
+    </div>
   </div>
 </section>
 
