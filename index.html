@@ -87,7 +87,7 @@
     }
 
     .pub-img {
-      width: 300px;
+      width: 340px;
       flex-shrink: 0;
       display: flex;
       align-items: flex-start;
@@ -102,6 +102,8 @@
     .pub-body .title { font-weight: bold; font-size: 0.93rem; margin-bottom: 2px; }
     .pub-body .authors { font-size: 0.88rem; margin-bottom: 2px; }
     .pub-body .venue { color: #555; font-size: 0.87rem; margin-bottom: 4px; }
+    .pub-body .venue .badge { display: inline-block; font-size: 0.78rem; font-weight: 600; color: #1a73e8; background: #eaf2fe; border: 1px solid #c6dbfb; border-radius: 999px; padding: 1px 9px; margin-left: 4px; text-decoration: none; }
+    .pub-body .venue .badge:hover { background: #d9e8fd; }
     .pub-body .abstract { font-size: 0.87rem; color: #444; margin-bottom: 4px; }
 
     /* ── Patents ── */
@@ -153,7 +155,7 @@
 <!-- ── Bio (no heading, like fredshentu) ── -->
 <div id="bio">
   <p>I am a final year robotics and AI PhD student in the <a href="https://robotics.me.utexas.edu/" target="_blank">Nuclear and Applied Robotics Group</a> at UT Austin, advised by <a href="https://www.me.utexas.edu/people/faculty-directory/pryor" target="_blank">Mitch Pryor</a>. 
-  My current research focuses on robotic skill and behavior composition for modular robots. The first two years of my PhD focused on game theory and nonlinear optimization.</p>
+  My current research focuses on robotic skill and behavior composition for modular robots. The first two years of my PhD focused on game theory, trajectory generation, and nonlinear optimization.</p>
   <p>I co-founded <a href="https://geckomaterials.com" target="_blank">geCKo Materials</a> in 2021, a hardware manufacturing startup commercializing biomimetic industrial adhesives. We've recently raised ~$10M, built a team of 10+, and ship <a href="https://www.geckomaterials.com/specifications" target="_blank">gMDA</a> weekly. Our CEO and the team have been <a href="https://www.youtube.com/watch?v=1Tb_UOQqeG8" target="_blank">crushing it</a>!</p>
   <p>During my PhD, I spent summers at Cruise working on motion planning and control analysis and their large driving model. Before my PhD, I spent time at HP Labs in Palo Alto, CA as a Roboticist and Research Engineer, working across mobile robotics, AI/ML, 3D printing, and edge compute.</p>
   <p>People describe me as "an all-around great guy."</p>
@@ -255,25 +257,22 @@
 <section id="publications">
   <h2>Publications</h2>
 
-  <!--
   <div class="pub">
-    <img src="img/bt-mcp-server-v2.svg" alt="Contract-Grounded Behavior Tree Synthesis">
+    <div class="pub-img"><img src="img/bt-mcp-server-v2.png" alt="Contract-Grounded Behavior Tree Synthesis via Coding Agents"></div>
     <div class="pub-body">
-      <div class="title">Contract-Grounded Behavior Tree Synthesis</div>
+      <div class="title">Contract-Grounded Behavior Tree Synthesis via Coding Agents</div>
       <div class="authors"><strong>J Salfity</strong>, B Anderson, M Pryor</div>
-      <div class="venue"><em>IEEE Robotics and Automation Letters (RA-L)</em>, 2026 (Submitted)</div>
-      <div class="links-row"><span style="color:#999; font-size:0.87rem;">website coming soon</span></div>
-      <div class="abstract">Abstract coming soon.</div>
+      <div class="venue"><em>IEEE Robotics and Automation Letters (RA-L)</em>, 2026 (Submitted) <a class="badge" href="https://arxiv.org/pdf/2607.12220" target="_blank">pdf</a> <a class="badge" href="https://jsalfity.github.io/agentic-bt-gen-webviewer/" target="_blank">Project Webpage</a></div>
+      <div class="abstract">A contract-grounded architecture for synthesizing deployable robot behavior trees from natural language, in which a coding agent queries a robot-side MCP server for an explicit contract of skills, operators, and composition templates before generating a validated, executable behavior tree. Non-expert operators can issue commands without knowledge of robot implementation details, while a runtime validation gate enforces correctness. Evaluated across 110 simulated PyRoboSim tasks and 14 tasks on a physical Husarion Panther robot with both closed (Sonnet 4.6) and smaller open-source (Gemma4:31b) LLMs, showing near-perfect BT validation, strong task success, and successful transfer to physical hardware running an opaque Nav2 stack.</div>
     </div>
   </div>
-  -->
 
   <div class="pub">
     <div class="pub-img"><img src="img/deployment_is_not_destiny.png" alt="Deployment Is Not Destiny"></div>
     <div class="pub-body">
       <div class="title">Deployment Is Not Destiny: Adapting Robots in the Field with Unseen Software, Hardware, and Compute Payloads</div>
       <div class="authors">S Swanbeck*, <strong>J Salfity*</strong>, J Gunawan, C Van Sice, B Anderson, M Pryor</div>
-      <div class="venue"><em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 2026 (Submitted) &nbsp;·&nbsp; <span style="font-size:0.85rem; color:#555;">* equal contribution</span></div>
+      <div class="venue"><em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 2026 (Submitted)</div>
       <div class="abstract">A plug-and-play framework for runtime recomposition of modular robots, enabling non-expert users to integrate unseen software, hardware, and compute payloads in the field within minutes. Demonstrated in disaster response scenarios at an operational nuclear reactor facility and in thermal-guided search.</div>
     </div>
   </div>
@@ -281,9 +280,9 @@
   <div class="pub">
     <div class="pub-img"><img src="img/ACL_2026.png" alt="Limited Linguistic Diversity"></div>
     <div class="pub-body">
-      <div class="title"><a href="https://aclanthology.org/2026.acl-long.507/" target="_blank">Limited Linguistic Diversity in Embodied AI Datasets</a></div>
+      <div class="title">Limited Linguistic Diversity in Embodied AI Datasets</div>
       <div class="authors">S Wanna*, A Luhtaru*, <strong>J Salfity</strong>, R Barron, J Moore, C Matuszek, M Pryor</div>
-      <div class="venue"><em>Association for Computational Linguistics (ACL)</em>, July 2026 &nbsp;·&nbsp; <span style="font-size:0.85rem; color:#555;">* equal contribution</span></div>
+      <div class="venue"><em>Association for Computational Linguistics (ACL)</em>, July 2026 <a class="badge" href="https://aclanthology.org/2026.acl-long.507/" target="_blank">paper</a></div>
       <div class="abstract">A systematic audit of widely used VLA corpora showing that many datasets rely on highly repetitive, template-like commands with limited structural variation. We quantify instruction language across lexical variety, duplication, semantic similarity, and syntactic complexity to support more principled dataset selection and targeted augmentation strategies.</div>
     </div>
   </div>
@@ -291,9 +290,9 @@
   <div class="pub">
     <div class="pub-img"><img src="img/ubiquitous_robots_conops.png" alt="No Reboot Required" style="width:75%"></div>
     <div class="pub-body">
-      <div class="title"><a href="https://ieeexplore.ieee.org/abstract/document/11078050/" target="_blank">No Reboot Required: Real-Time Modular Robot Payload Integration</a></div>
+      <div class="title">No Reboot Required: Real-Time Modular Robot Payload Integration</div>
       <div class="authors"><strong>J Salfity</strong>, C Van Sice, B Chen, S Swanbeck, B Anderson, M Pryor</div>
-      <div class="venue"><em>IEEE International Conference on Ubiquitous Robotics</em>, July 2025</div>
+      <div class="venue"><em>IEEE International Conference on Ubiquitous Robotics</em>, July 2025 <a class="badge" href="https://ieeexplore.ieee.org/abstract/document/11078050/" target="_blank">paper</a></div>
       <div class="abstract">A runtime integration system enabling modular robots to incorporate new hardware and software payloads during live operation, eliminating the need for system reboots and enabling continuous deployment.</div>
     </div>
   </div>
@@ -301,9 +300,9 @@
   <div class="pub">
     <div class="pub-img"><img src="img/temporal_semantic.jpg" alt="Temporal and Semantic Metrics"></div>
     <div class="pub-body">
-      <div class="title"><a href="https://arxiv.org/abs/2403.17238" target="_blank">Temporal and Semantic Evaluation Metrics for Foundation Models in Post-Hoc Analysis of Robotic Subtasks</a></div>
+      <div class="title">Temporal and Semantic Evaluation Metrics for Foundation Models in Post-Hoc Analysis of Robotic Subtasks</div>
       <div class="authors"><strong>J Salfity</strong>, S Wanna, M Choi, M Pryor</div>
-      <div class="venue"><em>IEEE International Conference on Ubiquitous Robotics Workshop on Virtual Environment-Based Synthetic Data Generation for Robotic Training</em>, July 2025</div>
+      <div class="venue"><em>IEEE International Conference on Ubiquitous Robotics Workshop on Virtual Environment-Based Synthetic Data Generation for Robotic Training</em>, July 2025 <a class="badge" href="https://arxiv.org/pdf/2403.17238" target="_blank">pdf</a></div>
       <div class="abstract">Temporal and semantic metrics for evaluating LLMs & VLMs ability to decompose robot trajectories into subtasks, benchmarking FM outputs against ground-truth subtask labels.</div>
     </div>
   </div>
@@ -323,9 +322,9 @@
   <div class="pub">
     <div class="pub-img"><img src="img/inverse_matrix_games.png" alt="Inverse Matrix Games" style="width:75%"></div>
     <div class="pub-body">
-      <div class="title"><a href="https://ieeexplore.ieee.org/abstract/document/9920011/" target="_blank">Inverse Matrix Games with Unique Quantal Response Equilibrium</a></div>
+      <div class="title">Inverse Matrix Games with Unique Quantal Response Equilibrium</div>
       <div class="authors">Yue Yu, <strong>J Salfity</strong>, D Fridovich-Keil, U Topcu</div>
-      <div class="venue"><em>IEEE Control Systems Letters</em>, 2022</div>
+      <div class="venue"><em>IEEE Control Systems Letters</em>, 2022 <a class="badge" href="https://ieeexplore.ieee.org/abstract/document/9920011/" target="_blank">paper</a></div>
       <div class="abstract">Inverse game problems in multiplayer matrix games under perception noise, inferring cost functions such that a desired joint strategy constitutes a unique quantal response equilibrium, with algorithms based on semidefinite programming and bilevel optimization.</div>
     </div>
   </div>
@@ -333,9 +332,9 @@
   <div class="pub">
     <div class="pub-img"><img src="img/development_of_robotic_3DP.png" alt="Automated Decaking"></div>
     <div class="pub-body">
-      <div class="title"><a href="https://ieeexplore.ieee.org/abstract/document/9197110/" target="_blank">Development of a Robotic System for Automated Decaking of 3D-Printed Parts</a></div>
+      <div class="title">Development of a Robotic System for Automated Decaking of 3D-Printed Parts</div>
       <div class="authors">H Nguyen, N Adrian, JLX Yan, <strong>J Salfity</strong>, W Allen, QC Pham</div>
-      <div class="venue"><em>IEEE International Conference on Robotics and Automation (ICRA)</em>, May 2020</div>
+      <div class="venue"><em>IEEE International Conference on Robotics and Automation (ICRA)</em>, May 2020 <a class="badge" href="https://ieeexplore.ieee.org/abstract/document/9197110/" target="_blank">paper</a></div>
       <div class="abstract">A robotic system using computer vision and manipulator control to automate the removal of residual powder from 3D-printed parts, enabling scalable post-processing for powder-bed fusion manufacturing.</div>
     </div>
   </div>
@@ -343,9 +342,9 @@
   <div class="pub">
     <div class="pub-img"><img src="img/edge_offload.png" alt="ML Inference Offload"></div>
     <div class="pub-body">
-      <div class="title"><a href="https://arxiv.org/abs/2012.04063" target="_blank">Cost-effective Machine Learning Inference Offload for Edge Computing</a></div>
+      <div class="title">Cost-effective Machine Learning Inference Offload for Edge Computing</div>
       <div class="authors">C Makaya, A Iyer, <strong>J Salfity</strong>, M Athreya, MA Lewis</div>
-      <div class="venue">HP Labs Technical Report, 2020</div>
+      <div class="venue">HP Labs Technical Report, 2020 <a class="badge" href="https://arxiv.org/pdf/2012.04063" target="_blank">pdf</a></div>
       <div class="abstract">An offloading mechanism that leverages on-premises edge compute resources to handle ML inference for resource-constrained devices, reducing reliance on distant cloud servers. Demonstrated on person and object detection for mobile robots and video surveillance with improvements in accuracy and latency.</div>
     </div>
   </div>
@@ -364,6 +363,8 @@
   <div class="patent"><a href="https://patents.google.com/patent/WO2019088990A1/en" target="_blank">Control System for Mobile Robots</a>. <strong>J Salfity</strong>, W Allen, H Horii. WO2019088990A1 (Filed 2017)</div>
   <div class="patent"><a href="https://patents.google.com/patent/WO2017086908A1/en" target="_blank">Correction of Filament Parameters</a>. S Stodder, <strong>J Salfity</strong>, M Majette. WO2017086908A1 (Filed 2015)</div>
 </section>
+
+<footer style="text-align:right; font-size:0.78rem; color:#999; margin-top:24px; padding-bottom:16px;">Last updated: July 2026</footer>
 
 </body>
 </html>
